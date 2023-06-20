@@ -1,0 +1,165 @@
+/* variable */
+:root {
+  /* Primary */
+
+  --clr-p-Purple: hsl(259, 100%, 65%);
+  --clr-p-Light-red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+
+  --clr-n-White: hsl(0, 0%, 100%);
+  --clr-n-Off-white: hsl(0, 0%, 94%);
+  --clr-n-Light-grey: hsl(0, 0%, 86%);
+  --clr-Smokey-grey: hsl(0, 1%, 44%);
+  --clr-Off-black: hsl(0, 0%, 8%);
+}
+
+/* Using BEM apprach */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--clr-n-Off-white);
+}
+.container {
+  background-color: white;
+  height: 30rem;
+  width: 36rem;
+  border-radius: 10px 10px 25% 10px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10% 0 0;
+}
+form {
+  height: 26%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 8%;
+  border-bottom: 1px solid var(--clr-n-Off-white);
+}
+label {
+  display: block;
+  font-weight: 400;
+  font-size: small;
+  color: var(--clr-Smokey-grey);
+}
+input {
+  height: 2.5rem;
+  width: 6.25rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--clr-n-Light-grey);
+  border-radius: 4px;
+  padding-left: 10px;
+}
+button {
+  height: 4.375rem;
+  width: 4.375rem;
+  background-color: var(--clr-p-Purple);
+  position: absolute;
+  right: -30px;
+  bottom: -35px;
+  border-radius: 50%;
+  border: none;
+}
+
+.paras {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+span {
+  color: var(--clr-p-Purple);
+}
+input:hover {
+  cursor: pointer;
+  border-color: var(--clr-p-Purple);
+  background-color: hsla(259, 100%, 65%, 0.1);
+}
+input:focus {
+  cursor: pointer;
+  border: none;
+  background-color: hsla(259, 100%, 65%, 0.1);
+  outline: 1px solid var(--clr-p-Purple);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+/* Remove number input arrows */
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+  .container {
+    height: 25rem;
+    width: 20rem;
+    padding-bottom: 0;
+  }
+  .card {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  form {
+    box-sizing: border-box;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--clr-n-Off-white);
+    padding-bottom: 3rem;
+  }
+  label {
+    text-align: start;
+  }
+  input {
+    width: 4.25rem;
+    font-size: 1rem;
+  }
+  button {
+    height: 3.375rem;
+    width: 3.375rem;
+    right: 35%;
+    bottom: -35px;
+  }
+  .paras {
+    margin-top: 8%;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: start;
+  }
+}
